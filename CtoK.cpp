@@ -167,7 +167,7 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		// Attempt input from file.
+		// Attempt input from concorde cycle file.
 		std::vector<int> tour;
 		size_t numEdges = readCycleFile(argv[1], tour);
 		if (numEdges != numCoords)
@@ -176,10 +176,10 @@ int main(int argc, char* argv[])
 			return EXIT_FAILURE;
 		}
 
-		// Calc tour cost.
+		// Calculate tour cost.
 		int cost = calcCost(tour, coordinates);
 
-		// Display stats.
+		// Display tour statistics.
 		std::cout << "Number of coordinates: " << numCoords << std::endl;
 		std::cout << std::fixed << std::setprecision(1) << "Total distance: ";
 		std::cout << ((cost / scaleFactor) * NM_PER_KM) << "nm \nTour path: ";
