@@ -1,3 +1,4 @@
+// File input/ouput utilities.
 #ifndef FILE_H
 #define FILE_H
 
@@ -82,7 +83,7 @@ size_t readCycleFile(const std::string fn, std::vector<int>& tour)
     return n;
 }
 
-//int writeTSPFile(const char* fn, int ncount, std::vector<std::array<double, 2>>& pts)
+// Write tsp file.
 bool writeTSPFile(const std::string fn, size_t ncount, std::vector<std::array<double, 2>>& pts)
 {
     std::ofstream ofs;
