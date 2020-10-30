@@ -4,7 +4,7 @@
 * Date: 10/30/2020
 *
 * 1. Converts a csv file of decimal degree lat/long coordinates to
-*    a tsp file suitable for input for Concorde TSP solver. Removes
+*    a tsp file suitable for input to the Concorde TSP solver. Removes
 *    any duplicate coordinates found in file.
 
 * 2. Converts above csv file and Concorde tour cycle (.cyc) file
@@ -109,8 +109,6 @@ int calcCost(std::vector<int>& tour, const std::vector<std::array<double, 2>>& p
 	for (auto i = tour.begin(); i < (tour.end() - 1); ++i)
 		// Rhumbline distance.
 		d += (int)(rhumbline(pts[*i][LATITUDE], pts[*i][LONGITUDE], pts[*(i + 1)][LATITUDE], pts[*(i + 1)][LONGITUDE]) * scaleFactor);
-
-	throw std::bad_alloc();
 
 	return d;
 }
