@@ -2,7 +2,7 @@
 Utility to convert Concorde TSP Program files.
 
 ### Program CtoK
-1. Converts a csv file of decimal degree lat/long coordinates to a tsp file suitable for input for Concorde TSP solver. Removes any duplicate coordinates found in file.
+1. Converts a csv file of decimal degree lat/long coordinates to a tsp file suitable for input for [Concorde TSP solver](https://www.math.uwaterloo.ca/tsp/concorde.html). Removes any duplicate coordinates found in file.
 2. Converts above csv file and Concorde tour cycle (.cyc) file into a kml file showing the generated tour. Optionally, can produce file with/without waypoint depiction (thumbtack).
 3. Minimal error checking performed.
 
