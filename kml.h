@@ -28,6 +28,7 @@ class KML
 
 public:
     KML() = default;
+
     ~KML()
     {
         if (!tagStack.empty())
@@ -47,14 +48,6 @@ public:
 
         ofs << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<kml>\n";
         return true;
-    }
-
-    void end()
-    {
-        if (!tagStack.empty())
-            std::cerr << "KML file error: closing file with open tags.\n";
-        ofs << "</kml>\n";
-        ofs.close();
     }
 
     void tagOpen(const char* tag)
